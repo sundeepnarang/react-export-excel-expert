@@ -80,9 +80,20 @@ const excelSheetFromDataSet = (dataSet) => {
 function getHeaderCell(v, cellRef, ws) {
     var cell = {};
     var headerCellStyle = {font: {bold: true}};
-    cell.v = v;
-    cell.t = 's';
-    cell.s = headerCellStyle;
+    if (typeof v === 'object') {
+        const {xlsxCellObject=null} =v;
+        if(xlsxCellObject && typeof xlsxCellObject === 'object'){
+            cell = xlsxCellObject;
+        } else {
+            cell.v = v.value;
+            cell.t = 's';
+            cell.s = v.style;
+        }
+    } else {
+        cell.v = v;
+        cell.t = 's';
+        cell.s = headerCellStyle;
+    }
     ws[cellRef] = cell;
 }
 
@@ -102,8 +113,13 @@ function getCell(v, cellRef, ws) {
         cell.z = XLSX.SSF._table[14];
         cell.v = dateToNumber(cell.v);
     } else if (typeof v === 'object') {
-        cell.v = v.value;
-        cell.s = v.style;
+        const {xlsxCellObject=null} =v;
+        if(xlsxCellObject && typeof xlsxCellObject === 'object'){
+            cell = xlsxCellObject;
+        } else {
+            cell.v = v.value;
+            cell.s = v.style;
+        }
     } else {
         cell.v = v;
         cell.t = 's';

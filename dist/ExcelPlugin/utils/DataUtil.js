@@ -93,9 +93,22 @@ var excelSheetFromDataSet = function excelSheetFromDataSet(dataSet) {
 function getHeaderCell(v, cellRef, ws) {
     var cell = {};
     var headerCellStyle = { font: { bold: true } };
-    cell.v = v;
-    cell.t = 's';
-    cell.s = headerCellStyle;
+    if ((typeof v === 'undefined' ? 'undefined' : _typeof(v)) === 'object') {
+        var _v$xlsxCellObject = v.xlsxCellObject,
+            xlsxCellObject = _v$xlsxCellObject === undefined ? null : _v$xlsxCellObject;
+
+        if (xlsxCellObject && (typeof xlsxCellObject === 'undefined' ? 'undefined' : _typeof(xlsxCellObject)) === 'object') {
+            cell = xlsxCellObject;
+        } else {
+            cell.v = v.value;
+            cell.t = 's';
+            cell.s = v.style;
+        }
+    } else {
+        cell.v = v;
+        cell.t = 's';
+        cell.s = headerCellStyle;
+    }
     ws[cellRef] = cell;
 }
 
@@ -115,8 +128,15 @@ function getCell(v, cellRef, ws) {
         cell.z = _xlsx2.default.SSF._table[14];
         cell.v = dateToNumber(cell.v);
     } else if ((typeof v === 'undefined' ? 'undefined' : _typeof(v)) === 'object') {
-        cell.v = v.value;
-        cell.s = v.style;
+        var _v$xlsxCellObject2 = v.xlsxCellObject,
+            xlsxCellObject = _v$xlsxCellObject2 === undefined ? null : _v$xlsxCellObject2;
+
+        if (xlsxCellObject && (typeof xlsxCellObject === 'undefined' ? 'undefined' : _typeof(xlsxCellObject)) === 'object') {
+            cell = xlsxCellObject;
+        } else {
+            cell.v = v.value;
+            cell.s = v.style;
+        }
     } else {
         cell.v = v;
         cell.t = 's';
