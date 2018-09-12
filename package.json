@@ -1,11 +1,11 @@
 {
-  "name": "react-export-excel",
-  "version": "0.5.3",
+  "name": "@qualityedgar/react-export-excel-expert",
+  "version": "0.5.4",
   "main": "dist/index.js",
   "description": "A tool to export dataset from react to excel format.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rdcalle/react-export-excel.git"
+    "url": "git+https://github.com/sundeepnarang/react-export-excel-expert"
   },
   "keywords": [
     "react-export-excel",
@@ -14,12 +14,12 @@
     "react-export",
     "react-excel-export"
   ],
-  "author": "Ricardo Díaz <rdcalle@gmail.com>",
+  "author": "Sundeep Narang <rdcalle@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rdcalle/react-export-excel/issues"
+    "url": "https://github.com/sundeepnarang/react-export-excel-expert/issues"
   },
-  "homepage": "https://github.com/rdcalle/react-export-excel#readme",
+  "homepage": "https://github.com/sundeepnarang/react-export-excel-expert#readme",
   "dependencies": {
     "file-saver": "1.3.8",
     "xlsx": "git+https://github.com/securedeveloper/js-xlsx.git"
