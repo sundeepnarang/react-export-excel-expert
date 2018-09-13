@@ -1,11 +1,11 @@
 # React-Export-Excel
 
-[![npm version](https://badge.fury.io/js/react-data-export.svg)](https://badge.fury.io/js/react-data-export)
-[![dependencies Status](https://david-dm.org/securedeveloper/react-data-export/status.svg)](https://david-dm.org/securedeveloper/react-data-export)
-[![devDependencies Status](https://david-dm.org/securedeveloper/react-data-export/dev-status.svg)](https://david-dm.org/securedeveloper/react-data-export?type=dev)
-[![Build Status](https://travis-ci.org/securedeveloper/react-data-export.svg?branch=master)](https://travis-ci.org/securedeveloper/react-data-export)
-[![Vulnerabilities](https://snyk.io/test/github/securedeveloper/react-data-export/badge.svg)](https://snyk.io/test/github/securedeveloper/react-data-export)
-[![Coverage Status](https://coveralls.io/repos/github/securedeveloper/react-data-export/badge.svg?branch=master)](https://coveralls.io/github/securedeveloper/react-data-export?branch=master)
+[![npm version](https://badge.fury.io/js/%40qualityedgar%2Freact-export-excel-expert.svg)](https://badge.fury.io/js/%40qualityedgar%2Freact-export-excel-expert)
+[![dependencies Status](https://david-dm.org/sundeepnarang/react-export-excel-expert/status.svg)](https://david-dm.org/sundeepnarang/react-export-excel-expert)
+[![devDependencies Status](https://david-dm.org/sundeepnarang/react-export-excel-expert/dev-status.svg)](https://david-dm.org/sundeepnarang/react-export-excel-expert?type=dev)
+[![Build Status](https://travis-ci.org/sundeepnarang/react-export-excel-expert.svg?branch=master)](https://travis-ci.org/sundeepnarang/react-export-excel-expert)
+[![Vulnerabilities](https://snyk.io/test/github/sundeepnarang/react-export-excel-expert/badge.svg)](https://snyk.io/test/github/sundeepnarang/react-export-excel-expert)
+[![Coverage Status](https://coveralls.io/repos/github/sundeepnarang/react-export-excel-expert/badge.svg?branch=master)](https://coveralls.io/github/sundeepnarang/react-export-excel-expert?branch=master)
 
 A export to excel library built with and for [React](http://facebook.github.io/react/index.html).
 
