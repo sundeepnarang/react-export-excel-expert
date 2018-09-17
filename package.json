@@ -1,6 +1,6 @@
 {
   "name": "@qualityedgar/react-export-excel-expert",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "main": "dist/index.js",
   "description": "A tool to export dataset from react to excel format.",
   "repository": {
