@@ -95,7 +95,7 @@ var ExcelFile = function (_React$Component) {
         if (typeof sheet.props.dataSet === "undefined" || sheet.props.dataSet.length === 0) {
           wb.Sheets[sheet.props.name] = (0, _DataUtil.excelSheetFromAoA)(_this2.createSheetData(sheet));
         } else {
-          wb.Sheets[sheet.props.name] = (0, _DataUtil.excelSheetFromDataSet)(sheet.props.dataSet);
+          wb.Sheets[sheet.props.name] = (0, _DataUtil.excelSheetFromDataSet)(sheet.props.dataSet, sheet.props.cols);
         }
       });
 

@@ -96,7 +96,7 @@ class ExcelFile extends React.Component {
         );
       } else {
         wb.Sheets[sheet.props.name] = excelSheetFromDataSet(
-          sheet.props.dataSet
+          sheet.props.dataSet, sheet.props.cols
         );
       }
     });

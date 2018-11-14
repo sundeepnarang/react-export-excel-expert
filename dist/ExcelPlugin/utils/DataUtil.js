@@ -35,6 +35,8 @@ var dateToNumber = function dateToNumber(v, date1904) {
 };
 
 var excelSheetFromDataSet = function excelSheetFromDataSet(dataSet) {
+    var cols = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
     /*
     Assuming the structure of dataset
     {
@@ -85,6 +87,10 @@ var excelSheetFromDataSet = function excelSheetFromDataSet(dataSet) {
 
     if (range.s.c < 10000000) {
         ws['!ref'] = _xlsx2.default.utils.encode_range(range);
+    }
+
+    if (cols.length) {
+        ws['!cols'] = cols;
     }
 
     return ws;

@@ -21,7 +21,7 @@ const dateToNumber = (v, date1904) => {
     return (epoch - new Date(Date.UTC(1899, 11, 30))) / (24 * 60 * 60 * 1000);
 };
 
-const excelSheetFromDataSet = (dataSet) => {
+const excelSheetFromDataSet = (dataSet,cols=[]) => {
     /*
     Assuming the structure of dataset
     {
@@ -72,6 +72,10 @@ const excelSheetFromDataSet = (dataSet) => {
 
     if (range.s.c < 10000000) {
         ws['!ref'] = XLSX.utils.encode_range(range);
+    }
+
+    if(cols.length){
+        ws['!cols'] = cols;
     }
 
     return ws;
